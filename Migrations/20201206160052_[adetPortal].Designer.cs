@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using adet_midterm_q2_jintalan_mikaela.Models;
 
 namespace adetmidtermq2jintalanmikaela.Migrations
 {
     [DbContext(typeof(AdetPortalDbContext))]
-    partial class AdetPortalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201206160052_[adetPortal]")]
+    partial class adetPortal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

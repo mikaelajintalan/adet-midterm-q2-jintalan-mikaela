@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace trylangsamidtermquiz2.Models
+namespace adet_midterm_q2_jintalan_mikaela.Models
 {
     public class AdetPortalDbContext : DbContext
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace trylangsamidtermquiz2.Models
+namespace adet_midterm_q2_jintalan_mikaela.Models
 {
     public class ErrorViewModel
     {

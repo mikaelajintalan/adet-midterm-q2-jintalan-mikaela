@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using trylangsamidtermquiz2.Models;
+using adet_midterm_q2_jintalan_mikaela.Models;
 
-namespace trylangsamidtermquiz2.Controllers
+namespace adet_midterm_q2_jintalan_mikaela.Controllers
 {
     public class HomeController : Controller
     {

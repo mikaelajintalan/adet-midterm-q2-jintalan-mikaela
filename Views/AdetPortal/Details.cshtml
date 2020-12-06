@@ -1,8 +1,204 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model adet_midterm_q2_jintalan_mikaela.Models.AdetPortal
+
+@{
+    ViewData["Title"] = "Details";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    body {
+        background-color: #fea8f3;
+    }
+</style>
+
+<h1>Details</h1>
+
+<div>
+    <h4>Prelim Computed Grades</</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PQ1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PQ1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PQ2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PQ2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PQ3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PQ3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PA1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PA1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PA2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PA2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PA3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PA3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PCG)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PCG)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MQ1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MQ1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MQ2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MQ2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MQ3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MQ3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MA1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MA1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MA2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MA2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MA3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MA3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MCG)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MCG)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PFQ1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PFQ1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PFQ2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PFQ2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PFQ3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PFQ3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PFA1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PFA1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PFA2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PFA2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PFA3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PFA3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PFCG)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PFCG)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FQ1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FQ1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FQ2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FQ2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FQ3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FQ3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FA1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FA1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FA2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FA2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FA3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FA3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FCG)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FCG)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>

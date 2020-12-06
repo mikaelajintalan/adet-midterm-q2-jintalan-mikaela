@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using trylangsamidtermquiz2.Models;
+using adet_midterm_q2_jintalan_mikaela.Models;
 
-namespace trylangsamidtermquiz2.Controllers
+namespace adet_midterm_q2_jintalan_mikaela.Controllers
 {
     public class AdetPortalController : Controller
     {
@@ -16,6 +16,12 @@ namespace trylangsamidtermquiz2.Controllers
         public AdetPortalController(AdetPortalDbContext DB)
         {
             _DB = DB;
+        }
+
+        // GET: StudentPortal
+        public async Task<IActionResult> Index()
+        {
+            return View(await _DB.StudentPortal.ToListAsync());
         }
 
         // GET: StudentPortal/Details/5
@@ -46,7 +52,7 @@ namespace trylangsamidtermquiz2.Controllers
         // POST: StudentPortal/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,StudentNumber,StudentName,Quiz1,Quiz2,Quiz3,Ass1,Ass2,Ass3")] AdetPortal adetportal)
+        public async Task<IActionResult> Create([Bind("Id,StudentNumber,StudentName,PQ1,PQ2,PQ3,PA1,PA2,PA3,PCG,MQ1,MQ2,MQ3,MA1,MA2,MA3,MCG,PFQ1,PFQ2,PFQ3,PFA1,PFA2,PFA3,PFCG,FQ1,FQ2,FQ3,FA1,FA2,FA3,FCG")] AdetPortal adetportal)
         {
             if (ModelState.IsValid)
             {
@@ -76,7 +82,7 @@ namespace trylangsamidtermquiz2.Controllers
         // POST: StudentPortal/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,StudentNumber,StudentName,Quiz1,Quiz2,Quiz3,Ass1,Ass2,Ass3")] AdetPortal adetportal)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,StudentNumber,StudentName,PQ1,PQ2,PQ3,PA1,PA2,PA3,PCG,MQ1,MQ2,MQ3,MA1,MA2,MA3,MCG,PFQ1,PFQ2,PFQ3,PFA1,PFA2,PFA3,PFCG,FQ1,FQ2,FQ3,FA1,FA2,FA3,FCG")] AdetPortal adetportal)
         {
             if (id != adetportal.Id)
             {

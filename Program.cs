@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace trylangsamidtermquiz2
+namespace adet_midterm_q2_jintalan_mikaela
 {
     public class Program
     {

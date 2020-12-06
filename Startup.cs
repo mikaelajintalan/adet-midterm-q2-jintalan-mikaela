@@ -10,9 +10,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-using trylangsamidtermquiz2.Models;
+using adet_midterm_q2_jintalan_mikaela.Models;
 
-namespace trylangsamidtermquiz2
+namespace adet_midterm_q2_jintalan_mikaela
 {
     public class Startup
     {

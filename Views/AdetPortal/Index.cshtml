@@ -1,8 +1,218 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<adet_midterm_q2_jintalan_mikaela.Models.AdetPortal>
+@{
+    ViewData["Title"] = "Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<style>
+    body {
+        background-color: #fea8f3;
+    }
+</style>
+
+<p>
+    <a class='btn btn-sm btn-outline-primary' asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PQ1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PQ2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PQ3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PA1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PA2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PA3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PCG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MQ1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MQ2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MQ3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MA1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MA2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MA3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MCG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PFQ1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PFQ2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PFQ3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PFA1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PFA2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PFA3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PFCG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FQ1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FQ2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FQ3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FA1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FA2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FA3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FCG)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PQ1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PQ2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PQ3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PA1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PA2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PA3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PCG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PFQ1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PFQ2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PFQ3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PFA1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PFA2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PFA3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PFCG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MQ1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MQ2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MQ3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MA1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MA2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MA3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MCG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FQ1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FQ2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FQ3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FA1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FA2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FA3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FCG)
+            </td>
+            <td class="text-right">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <a class="btn btn-small btn-outline-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-small btn-outline-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-small btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

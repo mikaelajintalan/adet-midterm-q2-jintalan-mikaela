@@ -1,8 +1,197 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model adet_midterm_q2_jintalan_mikaela.Models.AdetPortal
+@{
+    ViewData["Title"] = "Edit";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    body {
+        background-color: #fea8f3;
+    }
+</style>
+
+<h1>Edit</h1>
+
+<h4>Prelim Computed Grades</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group row">
+                <label asp-for="StudentNumber" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="StudentNumber" class="form-control" />
+                    <span asp-validation-for="StudentNumber" class="text-danger"></span>
+                </div>
+
+                <label asp-for="StudentName" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="StudentName" class="form-control" />
+                    <span asp-validation-for="StudentName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="PQ1" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PQ1" class="form-control" />
+                    <span asp-validation-for="PQ1" class="text-danger"></span>
+                </div>
+
+                <label asp-for="PQ2" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PQ2" class="form-control" />
+                    <span asp-validation-for="PQ2" class="text-danger"></span>
+                </div>
+
+                <label asp-for="PQ3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PQ3" class="form-control" />
+                    <span asp-validation-for="PQ3" class="text-danger"></span>
+                </div>
+
+                <label asp-for="PA1" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PA1" class="form-control" />
+                    <span asp-validation-for="PA1" class="text-danger"></span>
+                </div>
+
+                <label asp-for="PA2" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PA2" class="form-control" />
+                    <span asp-validation-for="PA2" class="text-danger"></span>
+                </div>
+
+                <label asp-for="PA3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PA3" class="form-control" />
+                    <span asp-validation-for="PA3" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="MQ1" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="MQ1" class="form-control" />
+                    <span asp-validation-for="MQ1" class="text-danger"></span>
+                </div>
+
+                <label asp-for="MQ2" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="MQ2" class="form-control" />
+                    <span asp-validation-for="MQ2" class="text-danger"></span>
+                </div>
+
+                <label asp-for="MQ3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="MQ3" class="form-control" />
+                    <span asp-validation-for="MQ3" class="text-danger"></span>
+                </div>
+
+                <label asp-for="MA1" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="MA1" class="form-control" />
+                    <span asp-validation-for="MA1" class="text-danger"></span>
+                </div>
+
+                <label asp-for="MA2" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="MA2" class="form-control" />
+                    <span asp-validation-for="MA2" class="text-danger"></span>
+                </div>
+
+                <label asp-for="MA3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="MA3" class="form-control" />
+                    <span asp-validation-for="MA3" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="PFQ1" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PFQ1" class="form-control" />
+                    <span asp-validation-for="PFQ1" class="text-danger"></span>
+                </div>
+
+                <label asp-for="PFQ2" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PFQ2" class="form-control" />
+                    <span asp-validation-for="PFQ2" class="text-danger"></span>
+                </div>
+
+                <label asp-for="PFQ3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PFQ3" class="form-control" />
+                    <span asp-validation-for="PFQ3" class="text-danger"></span>
+                </div>
+
+                <label asp-for="PFA1" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PFA1" class="form-control" />
+                    <span asp-validation-for="PFA1" class="text-danger"></span>
+                </div>
+
+                <label asp-for="PFA2" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PFA2" class="form-control" />
+                    <span asp-validation-for="PFA2" class="text-danger"></span>
+                </div>
+
+                <label asp-for="PFA3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="PFA3" class="form-control" />
+                    <span asp-validation-for="PFA3" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="FQ1" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="FQ1" class="form-control" />
+                    <span asp-validation-for="FQ1" class="text-danger"></span>
+                </div>
+
+                <label asp-for="FQ2" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="FQ2" class="form-control" />
+                    <span asp-validation-for="FQ2" class="text-danger"></span>
+                </div>
+
+                <label asp-for="FQ3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="FQ3" class="form-control" />
+                    <span asp-validation-for="FQ3" class="text-danger"></span>
+                </div>
+
+                <label asp-for="FA1" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="FA1" class="form-control" />
+                    <span asp-validation-for="FA1" class="text-danger"></span>
+                </div>
+
+                <label asp-for="FA2" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="FA2" class="form-control" />
+                    <span asp-validation-for="FA2" class="text-danger"></span>
+                </div>
+
+                <label asp-for="FA3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-2">
+                    <input asp-for="FA3" class="form-control" />
+                    <span asp-validation-for="FA3" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" /> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
 </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
