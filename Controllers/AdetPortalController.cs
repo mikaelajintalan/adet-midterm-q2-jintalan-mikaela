@@ -24,7 +24,7 @@ namespace adet_midterm_q2_jintalan_mikaela.Controllers
             return View(await _DB.StudentPortal.ToListAsync());
         }
 
-        // GET: StudentPortal/Details/5
+        // GET: StudentPortal/Details/1
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -63,7 +63,7 @@ namespace adet_midterm_q2_jintalan_mikaela.Controllers
             return View(adetportal);
         }
 
-        // GET: StudentPortal/Edit/5
+        // GET: StudentPortal/Edit/2
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -79,7 +79,7 @@ namespace adet_midterm_q2_jintalan_mikaela.Controllers
             return View(adetportal);
         }
 
-        // POST: StudentPortal/Edit/5
+        // POST: StudentPortal/Edit/2
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,StudentNumber,StudentName,PQ1,PQ2,PQ3,PA1,PA2,PA3,PCG,MQ1,MQ2,MQ3,MA1,MA2,MA3,MCG,PFQ1,PFQ2,PFQ3,PFA1,PFA2,PFA3,PFCG,FQ1,FQ2,FQ3,FA1,FA2,FA3,FCG")] AdetPortal adetportal)
@@ -112,7 +112,7 @@ namespace adet_midterm_q2_jintalan_mikaela.Controllers
             return View(adetportal);
         }
 
-        // GET: StudentPortal/Delete/5
+        // GET: StudentPortal/Delete/1
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -130,7 +130,7 @@ namespace adet_midterm_q2_jintalan_mikaela.Controllers
             return View(adetportal);
         }
 
-        // POST: StudentPortal/Delete/5
+        // POST: StudentPortal/Delete/1
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
